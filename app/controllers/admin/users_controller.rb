@@ -21,7 +21,7 @@ class Admin::UsersController < AdminController
   protected
 
   def user_params
-    params.require(:user).permit(:email, :group_ids => [])
+    params.require(:user).permit(:profile_attributes => [:id, :legal_name, :birthday, :location, :education, :occupation, :bio, :specialty] )
   end
 
 end
